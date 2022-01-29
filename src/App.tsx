@@ -1,15 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import arthur from './img/arthur.jpg';
+import kumis from './img/kumis.jpg';
 
 
 class App extends React.Component {
-  constructor() {
-    super();
-    
-    
-  }
   render() {
     return (
       <div>
@@ -71,22 +66,23 @@ class Counter extends React.Component {
   }
 }
 
- class Image extends React.Component {
+class Image extends React.Component {
   constructor(props) {
     super(props);
   }
   render(): React.ReactNode {
     let image;
     if(this.props.count%3===0){
-      image = <img src={arthur} alt="foto arthur" />;
+      image = <img src={kumis} width={200} alt="foto kumis" />;
     } else {
       image = null;
     }
-      return (
-        <div>
-          {image}
-        </div>
-      );
+
+    return (
+      <div style={{margin:"10px"}}>
+        {image}
+      </div>
+    );
   }
 }
 export default App;
