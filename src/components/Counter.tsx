@@ -28,7 +28,7 @@ class Counter extends React.Component<{}, Istate> {
           <button onClick={() => this.add(-1)}>-</button>
           <button onClick={() => this.add(1)}>+</button>
         </div>
-        {count%3===0 ? <FotoKumis/> : null}
+        {count%3===0 && count!=0? <FotoKumis/> : null}
       </div>
     );
   }
